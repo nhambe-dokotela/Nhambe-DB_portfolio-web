@@ -8,33 +8,20 @@
   <style>
     :root {
       --navy:         #070F1E;
-      --navy-mid:     #0D1B35;
       --navy-card:    #111F3A;
-      --navy-card2:   #152344;
-      --blue:         #1A4F8A;
-      --blue-light:   #2E7BC4;
-      --blue-bright:  #4DA3F5;
-      --sky:          rgba(77,163,245,0.12);
-      --sky-border:   rgba(77,163,245,0.22);
       --text-white:   #FFFFFF;
-      --text-light:   #C8DDEF;
       --text-mid:     #7FA3C8;
-      --text-soft:    #4E6E8E;
       --gold:         #F0A500;
-      --gold-dim:     rgba(240,165,0,0.15);
-      --gold-border:  rgba(240,165,0,0.3);
       --green:        #2DD4BF;
-      --green-dim:    rgba(45,212,191,0.1);
-      --green-border: rgba(45,212,191,0.25);
     }
   </style>
 </head>
-<body class="font-sans" style="background-color: var(--navy); color: var(--text-light);">
+<body class="font-sans" style="background-color: var(--navy); color: var(--text-mid);">
 
   <!-- Hero Section -->
-  <section class="text-center py-16" style="background: linear-gradient(to bottom, var(--green), var(--green-dim));">
+  <section class="text-center py-16" style="background: linear-gradient(to bottom, var(--green), rgba(45,212,191,0.1));">
     <h1 class="text-4xl font-bold mb-2" style="color: var(--text-white);">Projects</h1>
-    <p class="text-xl" style="color: var(--text-mid);">Explore some of the projects I’ve worked on in agricultural data analysis and dashboard development.</p>
+    <p class="text-xl max-w-xl mx-auto" style="color: var(--text-mid);">Explore some of the projects I’ve worked on in agricultural data analysis and dashboard development.</p>
   </section>
 
   <!-- Projects Cards Section -->
@@ -62,6 +49,13 @@
     </div>
 
   </section>
+
+  <!-- Back to Home Button -->
+  <div class="text-center mb-16">
+    <a href="index.html" style="background-color: var(--gold); color: var(--text-white);" class="px-6 py-3 rounded hover:brightness-110 transition">
+      Back to Home
+    </a>
+  </div>
 
   <!-- Footer -->
   <footer class="text-center py-6" style="color: var(--green); font-weight: 500;">
