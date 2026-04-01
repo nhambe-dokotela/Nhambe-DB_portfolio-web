@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maize Intake Quality & Risk Analyzer | Nhambe DB</title>
+  <title>Maize Quality & Risk Analyzer | Nhambe DB</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Hero Section -->
   <section class="text-center py-16 bg-gradient-to-b from-green-600 to-green-200">
-    <h1 class="text-4xl font-bold text-white mb-2">Maize Intake Quality & Risk Analyzer</h1>
-    <p class="text-green-100 text-xl">Dashboard and report analyzing maize intake quality and risk assessment.</p>
+    <h1 class="text-4xl font-bold text-white mb-2">Maize Quality & Risk Analyzer</h1>
+    <p class="text-green-100 text-xl">Dashboard and report for assessing maize intake quality and risk</p>
   </section>
 
   <!-- Content Section -->
   <section class="max-w-5xl mx-auto my-12 px-4 space-y-12">
 
-    <!-- maize_intake_quality_analyzer.png --!>
+    <!-- Dashboard Screenshot -->
     <div class="bg-white shadow-lg rounded-xl p-6">
       <h2 class="text-2xl font-semibold mb-4 text-green-800">Dashboard Screenshot</h2>
-      <img src="maize_intake_quality_analyzer.png" alt="Maize Dashboard" class="w-full rounded-lg shadow-md">
+      <img src="projects/maize-dashboard.png" alt="Maize Dashboard Screenshot" class="w-full rounded-lg shadow-md">
     </div>
 
     <!-- Embedded Report Summary -->
@@ -37,39 +37,39 @@
       <div>
         <h3 class="text-xl font-semibold text-green-700 mb-2">Executive Summary</h3>
         <p class="text-gray-700">
-          In regional grain storage facilities, the lack of standardized quality assessment often leads to subjective decision-making, resulting in grain spoilage and financial loss. This project provides a standardized, objective framework for Quality Control Clerks to assess grain batches at the point of intake.
+          Provides a standardized framework for Quality Control Clerks to assess maize batches at the point of intake, minimizing subjective decisions and reducing spoilage.
         </p>
       </div>
 
       <div>
         <h3 class="text-xl font-semibold text-green-700 mb-2">Problem Statement</h3>
         <p class="text-gray-700">
-          Before the implementation of this tool, there was no uniform method for calculating risk. Decisions to accept or reject maize were often inconsistent, increasing the risk of mold contamination in silos and reducing customer trust in the final product.
+          Before this tool, there was no uniform method for calculating risk. Decisions were inconsistent, increasing mold contamination and lowering customer trust.
         </p>
       </div>
 
       <div>
         <h3 class="text-xl font-semibold text-green-700 mb-2">Solution & Technical Implementation</h3>
         <ul class="list-disc ml-5 text-gray-700 space-y-2">
-          <li><strong>Weighted Risk Engine:</strong> Scoring system based on National Agricultural Weights evaluating seven critical metrics, including Moisture (%), Aflatoxin (ppb), and Insect Damage.</li>
-          <li><strong>Automated Decision Logic:</strong> “Accept/Reject” logic gate where thresholds (e.g., moisture > 14%) trigger high-risk status automatically.</li>
-          <li><strong>Farmer Performance Tracking:</strong> Lookup system to view specific farmer results for comparisons across farms.</li>
+          <li><strong>Weighted Risk Engine:</strong> Evaluates seven critical metrics including Moisture (%), Aflatoxin (ppb), and Insect Damage.</li>
+          <li><strong>Automated Decision Logic:</strong> Accept/Reject logic triggers high-risk alerts for critical thresholds (e.g., moisture >14%).</li>
+          <li><strong>Farmer Performance Tracking:</strong> Lookup system allows overview and comparisons of results across farms.</li>
         </ul>
       </div>
 
       <div>
         <h3 class="text-xl font-semibold text-green-700 mb-2">Key Impact</h3>
         <ul class="list-disc ml-5 text-gray-700 space-y-2">
-          <li><strong>Waste Reduction:</strong> Lowers probability of grain spoilage by blocking high-risk batches at intake.</li>
-          <li><strong>Data-Driven Extension:</strong> Provides provincial managers with clear data for targeted educational interventions.</li>
-          <li><strong>Operational Speed:</strong> Streamlines intake process for faster throughput during peak harvest seasons.</li>
+          <li><strong>Waste Reduction:</strong> Blocks high-risk batches to lower probability of grain spoilage.</li>
+          <li><strong>Data-Driven Extension:</strong> Provincial managers get clear data to address quality issues.</li>
+          <li><strong>Operational Speed:</strong> Streamlines intake for faster throughput during peak harvest seasons.</li>
         </ul>
       </div>
 
       <!-- Download PDF Button -->
       <div class="text-center mt-6">
-        <a href="./Maize_Intake_Quality_&_Risk_Analyser_Report[1].docx" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">
-          Download Full Report
+        <a href="projects/maize-report.pdf" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">
+          Download Full Report PDF
         </a>
       </div>
 
@@ -77,11 +77,12 @@
 
     <!-- Back Button -->
     <div class="text-center">
-      <a href="projects.html" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">Back to Projects</a>
+      <a href="./projects.html" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">Back to Projects</a>
     </div>
 
   </section>
 
+  <!-- Footer -->
   <footer class="text-center py-6 text-green-700 font-medium">
     Designed and Developed by Nhambe DB
   </footer>
