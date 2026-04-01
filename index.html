@@ -3,81 +3,461 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nhambe DB | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+  <title>Nhambe DB | Agricultural Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center py-16 bg-gradient-to-b from-green-200 to-green-50">
-    <img src="profile_photo.jpg" alt="Nhambe DB" class="w-32 h-32 rounded-full shadow-lg mb-4">
-    <h1 class="text-4xl font-bold mb-2">Nhambe DB</h1>
-    <p class="text-xl text-gray-700">Data Analyst | Agricultural Domain</p>
+    :root {
+      --navy:         #070F1E;
+      --navy-mid:     #0D1B35;
+      --navy-card:    #111F3A;
+      --navy-card2:   #152344;
+      --blue:         #1A4F8A;
+      --blue-light:   #2E7BC4;
+      --blue-bright:  #4DA3F5;
+      --sky:          rgba(77,163,245,0.12);
+      --sky-border:   rgba(77,163,245,0.22);
+      --text-white:   #FFFFFF;
+      --text-light:   #C8DDEF;
+      --text-mid:     #7FA3C8;
+      --text-soft:    #4E6E8E;
+      --gold:         #F0A500;
+      --gold-dim:     rgba(240,165,0,0.15);
+      --gold-border:  rgba(240,165,0,0.3);
+      --green:        #2DD4BF;
+      --green-dim:    rgba(45,212,191,0.1);
+      --green-border: rgba(45,212,191,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(7,15,30,0.94);
+      backdrop-filter: blur(14px);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+      border-bottom: 1px solid rgba(77,163,245,0.1);
+    }
+    .nav-brand { font-family: 'DM Serif Display', serif; color: var(--text-white); font-size: 1.15rem; }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 1.8rem; }
+    .nav-links a {
+      color: var(--text-mid); font-size: 0.79rem; font-weight: 500;
+      text-decoration: none; letter-spacing: 0.07em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue-bright); }
+
+    /* HERO */
+    .hero {
+      background: var(--navy-mid);
+      padding: 5.5rem 2rem 4.5rem;
+      text-align: center; position: relative; overflow: hidden;
+      border-bottom: 1px solid rgba(77,163,245,0.1);
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 15% 60%, rgba(46,123,196,0.2) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 25%, rgba(240,165,0,0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(77,163,245,0.08) 0%, transparent 60%);
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(77,163,245,0.08) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+
+    .avatar-wrap {
+      width: 120px; height: 120px; margin: 0 auto 1.5rem;
+      border-radius: 50%; padding: 3px;
+      background: linear-gradient(135deg, var(--gold), var(--blue-bright));
+      box-shadow: 0 0 40px rgba(77,163,245,0.25), 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .avatar-wrap img {
+      width: 100%; height: 100%; border-radius: 50%;
+      object-fit: cover; border: 3px solid var(--navy-mid); display: block;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      color: var(--text-white); margin-bottom: 0.5rem;
+    }
+    .hero-role {
+      font-size: 0.88rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--blue-bright); margin-bottom: 1rem;
+    }
+    .hero-tagline {
+      font-size: 1rem; color: var(--text-mid);
+      max-width: 420px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.75;
+    }
+    .hero-badges { display: flex; gap: 0.55rem; justify-content: center; flex-wrap: wrap; }
+    .badge {
+      background: rgba(77,163,245,0.1); border: 1px solid rgba(77,163,245,0.2);
+      color: var(--text-light); font-size: 0.73rem; font-weight: 500;
+      padding: 0.3rem 0.9rem; border-radius: 999px; letter-spacing: 0.04em;
+    }
+    .badge-gold { background: var(--gold-dim); border-color: var(--gold-border); color: var(--gold); }
+
+    /* MAIN */
+    main {
+      max-width: 860px; margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+
+    /* AVAILABILITY BANNER */
+    .avail-banner {
+      background: linear-gradient(90deg, rgba(45,212,191,0.07), rgba(77,163,245,0.07));
+      border: 1px solid var(--green-border);
+      border-radius: 12px; padding: 1rem 1.4rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .avail-dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+      background: var(--green); animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 3px rgba(45,212,191,0.2); }
+      50%      { box-shadow: 0 0 0 7px rgba(45,212,191,0.06); }
+    }
+    .avail-text { font-size: 0.88rem; color: var(--text-light); }
+    .avail-text strong { color: var(--green); }
+
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(77,163,245,0.15), transparent);
+    }
+
+    /* CARDS */
+    .card {
+      background: var(--navy-card);
+      border-radius: 16px; padding: 1.8rem 2rem;
+      border: 1px solid rgba(77,163,245,0.1);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .card:hover {
+      border-color: rgba(77,163,245,0.3);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+      transform: translateY(-2px);
+    }
+    .card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(to bottom, var(--blue-bright), var(--blue));
+      border-radius: 3px 0 0 3px;
+    }
+    .card.gold-stripe::before  { background: linear-gradient(to bottom, var(--gold), #b87c00); }
+    .card.green-stripe::before { background: linear-gradient(to bottom, var(--green), #16a394); }
+
+    .card-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+    .card-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .icon-blue  { background: rgba(77,163,245,0.15);  color: var(--blue-bright); }
+    .icon-gold  { background: var(--gold-dim);          color: var(--gold); }
+    .icon-green { background: var(--green-dim);         color: var(--green); }
+    .icon-indigo{ background: rgba(129,140,248,0.15);  color: #818cf8; }
+
+    .card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem; color: var(--text-white);
+    }
+    .card p { color: var(--text-mid); font-size: 0.93rem; line-height: 1.8; }
+
+    /* ABOUT */
+    .about-card { background: var(--navy-card2); }
+    .about-card p { color: var(--text-light); font-size: 0.96rem; }
+
+    /* CV */
+    .cv-card {
+      background: linear-gradient(135deg, #0D1B35, #0F2548, #122B5A);
+      border-color: var(--gold-border);
+    }
+    .cv-card:hover { border-color: rgba(240,165,0,0.5); }
+    .cv-card h2 { color: var(--text-white); }
+    .cv-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem;
+      background: var(--gold); color: #070F1E;
+      font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em;
+      text-transform: uppercase; text-decoration: none;
+      padding: 0.6rem 1.4rem; border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(240,165,0,0.3);
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .cv-btn:hover { background: #ffc030; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(240,165,0,0.4); }
+
+    /* PROJECTS */
+    .project-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; margin-top: 0.2rem; }
+    .project-list li {
+      display: flex; align-items: center; gap: 0.75rem;
+      background: rgba(77,163,245,0.06); border: 1px solid var(--sky-border);
+      border-radius: 10px; padding: 0.7rem 1rem;
+      font-size: 0.9rem; color: var(--text-light); font-weight: 500;
+      transition: background 0.2s;
+    }
+    .project-list li:hover { background: rgba(77,163,245,0.12); }
+    .project-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--blue-bright); }
+    .project-dot.gold { background: var(--gold); }
+    .tag-progress {
+      margin-left: auto; font-size: 0.67rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      padding: 0.15rem 0.55rem; border-radius: 999px;
+    }
+
+    /* CERTIFICATIONS */
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-top: 0.2rem; }
+    @media (max-width: 540px) { .cert-grid { grid-template-columns: 1fr; } }
+    .cert-item {
+      background: rgba(77,163,245,0.06); border: 1px solid var(--sky-border);
+      border-radius: 10px; padding: 0.8rem 1rem;
+    }
+    .cert-item strong { display: block; font-weight: 600; color: var(--text-white); font-size: 0.88rem; margin-bottom: 0.2rem; }
+    .cert-item .issuer { color: var(--text-soft); font-size: 0.77rem; }
+    .cert-item.in-progress { border-color: var(--gold-border); background: rgba(240,165,0,0.05); }
+    .cert-item.in-progress strong { color: var(--gold); }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 0.65rem; margin-top: 0.2rem;
+    }
+    .skill-pill {
+      background: rgba(77,163,245,0.07); border: 1px solid var(--sky-border);
+      border-left: 3px solid var(--blue-bright);
+      border-radius: 8px; padding: 0.6rem 0.9rem;
+      font-size: 0.82rem; font-weight: 500; color: var(--text-light);
+      transition: background 0.2s;
+    }
+    .skill-pill:hover { background: rgba(77,163,245,0.14); }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-top: 0.2rem; }
+    @media (max-width: 540px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      background: rgba(77,163,245,0.06); border: 1px solid var(--sky-border);
+      border-radius: 10px; padding: 0.75rem 1rem;
+      text-decoration: none; color: var(--text-light);
+      font-size: 0.87rem; font-weight: 500;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .contact-item:hover { background: rgba(77,163,245,0.14); border-color: rgba(77,163,245,0.4); color: var(--blue-bright); }
+    .contact-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy-mid);
+      border-top: 1px solid rgba(77,163,245,0.1);
+      text-align: center; padding: 1.8rem 1rem;
+      font-size: 0.78rem; color: var(--text-soft); letter-spacing: 0.05em;
+    }
+    footer span { color: var(--gold); }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 0.75rem; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-soft); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--blue-bright); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-inner { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both; }
+    main > * { animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) both; }
+    main > *:nth-child(1) { animation-delay: 0.05s; }
+    main > *:nth-child(2) { animation-delay: 0.1s; }
+    main > *:nth-child(3) { animation-delay: 0.15s; }
+    main > *:nth-child(4) { animation-delay: 0.2s; }
+    main > *:nth-child(5) { animation-delay: 0.25s; }
+    main > *:nth-child(6) { animation-delay: 0.3s; }
+    main > *:nth-child(7) { animation-delay: 0.35s; }
+    main > *:nth-child(8) { animation-delay: 0.4s; }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 1rem; }
+      main { padding: 2rem 1rem 4rem; }
+      .card { padding: 1.4rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">Nhambe <span>DB</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certs</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="avatar-wrap">
+        <img src="profile_photo.jpg" alt="Nhambe DB">
+      </div>
+      <h1>Nhambe DB</h1>
+      <p class="hero-role">Agricultural Data Analyst</p>
+      <p class="hero-tagline">Turning farm data into decisions that matter.</p>
+    </div>
   </section>
 
-  <!-- Main Cards Section -->
-  <section class="max-w-4xl mx-auto my-12 space-y-6 px-4">
+  <!-- MAIN -->
+  <main>
 
-    <!-- About Card -->
-    <div class="bg-white shadow-lg rounded-xl p-6">
-      <h2 class="text-2xl font-semibold mb-2">About Me</h2>
-      <p>  Hi there, welcome to my website. I'm Nhambe DB, a final-year Agricultural Extension student turned data enthusiast. I'm passionate about turning agricultural data into actionable insights that improve real farming outcomes. With hands-on experience in data analysis, visualization, and dashboard development, I bring energy, curiosity, and a drive to deliver meaningful results. Currently seeking part-time opportunities, and available full-time from December 2026.
+    <div class="section-divider"></div>
+
+    <!-- About -->
+    <div class="card about-card" id="about">
+      <div class="card-header">
+        <div class="card-icon icon-blue">&#127807;</div>
+        <h2>About Me</h2>
+      </div>
+      <p>Hi there, welcome to my website. I'm Nhambe DB, a final-year Agricultural Extension student turned data enthusiast. I'm passionate about turning agricultural data into actionable insights that improve real farming outcomes. With hands-on experience in data analysis, visualization, and dashboard development, I bring energy, curiosity, and a drive to deliver meaningful results.</p>
+    </div>
+
+    <!-- CV -->
+    <div class="card cv-card gold-stripe" id="cv">
+      <div class="card-header">
+        <div class="card-icon icon-gold">&#128196;</div>
+        <h2>Curriculum Vitae</h2>
+      </div>
+      <p>View my full CV — qualifications, experience, and what I bring to the table.</p>
+      <a href="./cv.html" class="cv-btn">View CV &rarr;</a>
+    </div>
+
+    <!-- Projects -->
+    <div class="card" id="projects" onclick="window.location.href='projects.html'" style="cursor:pointer;">
+      <div class="card-header">
+        <div class="card-icon icon-blue">&#128202;</div>
+        <h2>Projects</h2>
+      </div>
+      <ul class="project-list">
+        <li><div class="project-dot"></div>Maize Quality &amp; Risk Analyzer</li>
+        <li><div class="project-dot"></div>Farm Profitability Dashboard</li>
+        <li>
+          <div class="project-dot gold"></div>
+          Regional Sales &amp; Revenue Dashboard
+          <span class="tag-progress">In Progress</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div class="card gold-stripe" id="certifications" onclick="window.location.href='certifications.html'" style="cursor:pointer;">
+      <div class="card-header">
+        <div class="card-icon icon-gold">&#127942;</div>
+        <h2>Certifications</h2>
+      </div>
+      <div class="cert-list">
+        <div class="cert-item">
+          <strong>Spreadsheet Mastery</strong>
+          <span class="issuer">Saylor Academy</span>
+        </div>
+        <div class="cert-item">
+          <strong>Data Fundamentals</strong>
+          <span class="issuer">IBM SkillsBuild</span>
+        </div>
+        <div class="cert-item">
+          <strong>Statistics</strong>
+          <span class="issuer">IBM SkillsBuild</span>
+        </div>
+        <div class="cert-item in-progress">
+          <strong>Relational Database</strong>
+          <span class="issuer">freeCodeCamp &mdash; In Progress</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="card green-stripe" id="skills">
+      <div class="card-header">
+        <div class="card-icon icon-green">&#9881;</div>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-list">
+        <div class="skill-pill">Excel — Advanced Formulas</div>
+        <div class="skill-pill">Data Modeling</div>
+        <div class="skill-pill">Financial Modeling</div>
+        <div class="skill-pill">VLOOKUPs &amp; Pivot Tables</div>
+        <div class="skill-pill">Data Analysis</div>
+        <div class="skill-pill">Dashboard Development</div>
+        <div class="skill-pill">Data Visualization</div>
+        <div class="skill-pill">Agricultural Domain Knowledge</div>
+      </div>
+    </div>
+
+    <!-- Availability -->
+    <div class="avail-banner">
+      <div class="avail-dot"></div>
+      <p class="avail-text">
+        <strong>Available for part-time work now</strong> &mdash;
+        transitioning to full-time from December 2026.
       </p>
     </div>
 
-    <!-- CV Card -->
-    <div class="bg-white shadow-lg rounded-xl p-6 flex flex-col items-start hover:shadow-xl transition cursor-pointer">
-      <h2 class="text-2xl font-semibold mb-2">Curriculum Vitae</h2>
-      <p class="mb-4">View my CV directly in your browser.</p>
-      <a href="./cv.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">View CV</a>
-      
-    <!-- Projects Card -->
-    <div onclick="window.location.href='projects.html'" class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition cursor-pointer">
-      <h2 class="text-2xl font-semibold mb-2">Projects</h2>
-      <ul class="list-disc ml-5">
-        <li>Maize Quality & Risk Analyzer</li>
-        <li>Farm Profitability Dashboard</li>
-        <li>Regional Sales & Revenue Dashboard (In Progress)</li>
-      </ul>
+    <!-- Contact -->
+    <div class="card" id="contact">
+      <div class="card-header">
+        <div class="card-icon icon-indigo">&#128172;</div>
+        <h2>Let's Chat!</h2>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:doctornhambe@gmail.com" class="contact-item">
+          <div class="contact-icon" style="background:rgba(77,163,245,0.12);color:#4DA3F5;">&#9993;</div>
+          doctornhambe@gmail.com
+        </a>
+        <a href="tel:+27648380142" class="contact-item">
+          <div class="contact-icon" style="background:rgba(45,212,191,0.12);color:#2DD4BF;">&#128222;</div>
+          +27 64 838 0142
+        </a>
+        <a href="https://www.linkedin.com/in/doctor-nhambe-41a5083ba/" target="_blank" class="contact-item">
+          <div class="contact-icon" style="background:rgba(10,102,194,0.2);color:#4DA3F5;font-weight:700;font-size:0.85rem;">in</div>
+          LinkedIn Profile
+        </a>
+        <a href="https://wa.me/27676712070" target="_blank" class="contact-item">
+          <div class="contact-icon" style="background:rgba(37,211,102,0.12);color:#25D366;">&#128172;</div>
+          WhatsApp Chat
+        </a>
+      </div>
     </div>
 
-    <!-- Certifications Card -->
-    <div onclick="window.location.href='certifications.html'" class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition cursor-pointer">
-      <h2 class="text-2xl font-semibold mb-2">Certifications</h2>
-      <ul class="list-disc ml-5">
-        <li>Spreadsheet Mastery – Saylor Academy</li>
-        <li>Data Fundamentals – IBM SkillsBuild</li>
-        <li>Statistics – IBM SkillsBuild</li>
-        <li>Relational Database Certification – freeCodeCamp (In Progress)</li>
-      </ul>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </div>
-
-    <!-- Skills Card -->
-    <div class="bg-white shadow-lg rounded-xl p-6">
-      <h2 class="text-2xl font-semibold mb-2">Skills</h2>
-      <ul class="space-y-2">
-        <li class="bg-green-100 px-3 py-1 rounded">Excel (Advanced Formulas & Data Modeling)</li>
-        <li class="bg-green-100 px-3 py-1 rounded">Financial Modeling, VLOOKUPs, Data Analysis</li>
-        <li class="bg-green-100 px-3 py-1 rounded">Dashboard Development</li>
-      </ul>
-    </div>
-
-    <!-- Contact Card -->
-    <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition">
-      <h2 class="text-2xl font-semibold mb-2">Let's Chat!</h2>
-      <ul class="space-y-1">
-        <li>Email: <a href="mailto:doctornhambe@gmail.com" class="text-green-600 hover:underline">doctornhambe@gmail.com</a></li>
-        <li>Phone: <a href="tel:+27648380142" class="text-green-600 hover:underline">+27 64 838 0142</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/doctor-nhambe-41a5083ba/" target="_blank" class="text-green-600 hover:underline">Profile</a></li>
-        <li>WhatsApp: <a href="https://wa.me/27676712070" target="_blank" class="text-green-600 hover:underline">Chat Now</a></li>
-      </ul>
-    </div>
-
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500">
-    Designed and Developed by Nhambe DB
+    Designed &amp; Developed by <span>Nhambe DB</span> &mdash; Agricultural Data Analyst &mdash; South Africa
   </footer>
 
 </body>
