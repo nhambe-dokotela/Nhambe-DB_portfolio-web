@@ -5,43 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Nhambe DB</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --navy:         #070F1E;
+      --navy-mid:     #0D1B35;
+      --navy-card:    #111F3A;
+      --navy-card2:   #152344;
+      --blue:         #1A4F8A;
+      --blue-light:   #2E7BC4;
+      --blue-bright:  #4DA3F5;
+      --sky:          rgba(77,163,245,0.12);
+      --sky-border:   rgba(77,163,245,0.22);
+      --text-white:   #FFFFFF;
+      --text-light:   #C8DDEF;
+      --text-mid:     #7FA3C8;
+      --text-soft:    #4E6E8E;
+      --gold:         #F0A500;
+      --gold-dim:     rgba(240,165,0,0.15);
+      --gold-border:  rgba(240,165,0,0.3);
+      --green:        #2DD4BF;
+      --green-dim:    rgba(45,212,191,0.1);
+      --green-border: rgba(45,212,191,0.25);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="font-sans" style="background-color: var(--navy); color: var(--text-light);">
 
   <!-- Hero Section -->
-  <section class="text-center py-16 bg-gradient-to-b from-green-600 to-green-200">
-    <h1 class="text-4xl font-bold text-white mb-2">Projects</h1>
-    <p class="text-green-100 text-xl">Explore some of the projects I’ve worked on in agricultural data analysis and dashboard development.</p>
+  <section class="text-center py-16" style="background: linear-gradient(to bottom, var(--green), var(--green-dim));">
+    <h1 class="text-4xl font-bold mb-2" style="color: var(--text-white);">Projects</h1>
+    <p class="text-xl" style="color: var(--text-mid);">Explore some of the projects I’ve worked on in agricultural data analysis and dashboard development.</p>
   </section>
 
   <!-- Projects Cards Section -->
   <section class="max-w-6xl mx-auto my-12 px-4 grid gap-6 sm:grid-cols-1 md:grid-cols-2">
 
     <!-- Project 1 -->
-    <div class="bg-green-50 shadow-lg rounded-xl p-6 hover:shadow-xl transition border-l-4 border-green-600">
-      <h2 class="text-2xl font-semibold mb-2 text-green-800">Maize Quality & Risk Analyzer</h2>
-      <p class="text-gray-700 mb-4">Tool to assess maize quality and identify risk factors affecting yield.</p>
-      <a href="./maize.html" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">View Report</a>
+    <div class="shadow-lg rounded-xl p-6 hover:shadow-xl transition" style="background-color: var(--navy-card); border-left: 4px solid var(--green);">
+      <h2 class="text-2xl font-semibold mb-2" style="color: var(--green);">Maize Quality & Risk Analyzer</h2>
+      <p style="color: var(--text-mid);" class="mb-4">Tool to assess maize quality and identify risk factors affecting yield.</p>
+      <a href="./maize.html" style="background-color: var(--gold); color: var(--text-white);" class="px-4 py-2 rounded hover:brightness-110 transition">View Report</a>
     </div>
 
     <!-- Project 2 -->
-    <div class="bg-green-50 shadow-lg rounded-xl p-6 hover:shadow-xl transition border-l-4 border-green-600">
-      <h2 class="text-2xl font-semibold mb-2 text-green-800">Farm Profitability Dashboard</h2>
-      <p class="text-gray-700 mb-4">Interactive dashboard to analyze farm income, costs, and profitability trends.</p>
-      <a href="./farm.html" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">View Report</a>
+    <div class="shadow-lg rounded-xl p-6 hover:shadow-xl transition" style="background-color: var(--navy-card); border-left: 4px solid var(--green);">
+      <h2 class="text-2xl font-semibold mb-2" style="color: var(--green);">Farm Profitability Dashboard</h2>
+      <p style="color: var(--text-mid);" class="mb-4">Interactive dashboard to analyze farm income, costs, and profitability trends.</p>
+      <a href="./farm.html" style="background-color: var(--gold); color: var(--text-white);" class="px-4 py-2 rounded hover:brightness-110 transition">View Report</a>
     </div>
 
     <!-- Project 3 -->
-    <div class="bg-green-50 shadow-lg rounded-xl p-6 hover:shadow-xl transition border-l-4 border-green-600">
-      <h2 class="text-2xl font-semibold mb-2 text-green-800">Regional Sales & Revenue Dashboard (In Progress)</h2>
-      <p class="text-gray-700 mb-4">Current project: Excel version done; SQL-based version coming soon.</p>
-      <a href="regional-sales.html" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">View Report</a>
+    <div class="shadow-lg rounded-xl p-6 hover:shadow-xl transition" style="background-color: var(--navy-card); border-left: 4px solid var(--green);">
+      <h2 class="text-2xl font-semibold mb-2" style="color: var(--green);">Regional Sales & Revenue Dashboard (In Progress)</h2>
+      <p style="color: var(--text-mid);" class="mb-4">Current project: Excel version done; SQL-based version coming soon.</p>
+      <a href="regional-sales.html" style="background-color: var(--gold); color: var(--text-white);" class="px-4 py-2 rounded hover:brightness-110 transition">View Report</a>
     </div>
 
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-green-700 font-medium">
+  <footer class="text-center py-6" style="color: var(--green); font-weight: 500;">
     Designed and Developed by Nhambe DB
   </footer>
 
