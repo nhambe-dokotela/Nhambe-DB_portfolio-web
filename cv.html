@@ -5,42 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV | Nhambe DB</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --navy:         #070F1E;
+      --navy-mid:     #0D1B35;
+      --navy-card:    #111F3A;
+      --navy-card2:   #152344;
+      --blue:         #1A4F8A;
+      --blue-light:   #2E7BC4;
+      --blue-bright:  #4DA3F5;
+      --sky:          rgba(77,163,245,0.12);
+      --sky-border:   rgba(77,163,245,0.22);
+      --text-white:   #FFFFFF;
+      --text-light:   #C8DDEF;
+      --text-mid:     #7FA3C8;
+      --text-soft:    #4E6E8E;
+      --gold:         #F0A500;
+      --gold-dim:     rgba(240,165,0,0.15);
+      --gold-border:  rgba(240,165,0,0.3);
+      --green:        #2DD4BF;
+      --green-dim:    rgba(45,212,191,0.1);
+      --green-border: rgba(45,212,191,0.25);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="font-sans" style="background-color: var(--navy); color: var(--text-light);">
 
   <!-- Hero Section -->
-  <section class="text-center py-16 bg-gradient-to-b from-green-600 to-green-200">
-    <h1 class="text-4xl font-bold text-white mb-2">Curriculum Vitae</h1>
-    <p class="text-green-100 text-xl">View my professional experience and qualifications</p>
+  <section class="text-center py-16" style="background: linear-gradient(to bottom, var(--green), var(--green-dim));">
+    <h1 class="text-4xl font-bold mb-2" style="color: var(--text-white);">Curriculum Vitae</h1>
+    <p class="text-xl" style="color: var(--text-mid);">View my professional experience and qualifications</p>
   </section>
 
   <!-- CV Viewer -->
   <section class="max-w-5xl mx-auto my-12 px-4">
 
-    <div class="bg-white shadow-lg rounded-xl p-4">
+    <div class="shadow-lg rounded-xl p-4" style="background-color: var(--navy-card);">
       <iframe 
         src="cv[1].pdf" 
-        class="w-full h-[800px] rounded-lg border"
+        class="w-full h-[800px] rounded-lg border" 
+        style="border-color: var(--blue-bright);" 
         frameborder="0">
       </iframe>
     </div>
 
-    <!-- Download Button (optional but recommended) -->
+    <!-- Download Button -->
     <div class="text-center mt-6">
-      <a href="cv[1].pdf" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">
+      <a href="cv[1].pdf" target="_blank" style="background-color: var(--gold); color: var(--text-white);" class="px-6 py-3 rounded hover:brightness-110 transition">
         Download CV
       </a>
     </div>
 
     <!-- Back Button -->
     <div class="text-center mt-4">
-      <a href="index.html" class="text-green-700 hover:underline">← Back to Home</a>
+      <a href="index.html" style="color: var(--gold);" class="hover:underline">← Back to Home</a>
     </div>
 
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-green-700 font-medium">
+  <footer class="text-center py-6" style="color: var(--green); font-weight: 500;">
     Designed and Developed by Nhambe DB
   </footer>
 
