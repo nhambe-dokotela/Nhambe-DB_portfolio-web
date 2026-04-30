@@ -234,46 +234,32 @@
     .cert-item.in-progress strong { color: var(--gold); }
 
     /* SKILLS */
-.skills-section {
-  Background: rgba(77,163,245,0.06);
-  Border: 1px solid var(--sky-border);
-  Border-radius: 10px;
-  Padding: 1.5rem;
-}
-
-.skills-section h2 {
-  Color: var(--green);
-  Font-size: 1.3rem;
-  Font-weight: 600;
-  Margin-bottom: 1rem;
-}
-
+.ski/* SKILLS */
 .skills-table {
-  Width: 100%;
-  Border-collapse: collapse;
-  Margin-top: 0.5rem;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
 }
 
 .skills-table th {
-  Text-align: left;
-  Padding: 0.6rem 1rem;
-  Background: rgba(77,163,245,0.1);
-  Color: var(--text-white);
-  Font-weight: 600;
-  Font-size: 0.85rem;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  background: rgba(77,163,245,0.1);
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
 .skills-table td {
-  Padding: 0.6rem 1rem;
-  Color: var(--text-mid);
-  Font-size: 0.85rem;
-  Border-bottom: 1px solid var(--sky-border);
+  padding: 0.6rem 1rem;
+  color: var(--text-mid);
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--sky-border);
 }
 
 .skills-table tr:last-child td {
-  Border-bottom: none;
+  border-bottom: none;
 }
-
 
     /* CONTACT */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-top: 0.2rem; }
@@ -429,80 +415,83 @@
       </div>
     </div>
 
-    <!-- Skills -->
-    <section id="skills" class="max-w-5xl mx-uto my-12 px-4">
-      <div class="shadow-lg rounded-xl p-6 space-y-8" style"background-colour: var(--navy-card);">
-      <h2 class="text-2xl font-se,ibold mb-4" style="colour: var(--green);">Tools & Technologies</h2>
-      <table class=”skills-table”>
-  <thead>
-    <tr style=”background-color: var(--green); color: var(--navy);”>
-      <th class=”p-3 text-left font-semibold”>Tool</th>
-      <th class=”p-3 text-left font-semibold”>Level</th>
-    </tr>
-  </thead>
-  <tbody style=”color: var(--text-mid);”>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>Microsoft Excel</td>
-      <td class=”p-3”>Advanced</td>
-    </tr>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>SQL (PostgreSQL)</td>
-      <td class=”p-3”>Intermediate</td>
-    </tr>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>Python (Pandas, NumPy, Matplotlib, Seaborn)</td>
-      <td class=”p-3”>Foundational</td>
-    </tr>
-    <tr>
-      <td class=”p-3”>Power BI</td>
-      <td class=”p-3”>In Progress</td>
-    </tr>
-  </tbody>
- </table>
-</div>
-      
-<div>
-  <h2 class="text-2xl font-se,ibold mb-4" style="colour: var(--green);">Skills</h2>
-  <thead>
-    <tr style=”background-color: var(--green); color: var(--navy);”>
-      <th class=”p-3 text-left font-semibold”>Skill</th>
-      <th class=”p-3 text-left font-semibold”>Level</th>
-    </tr>
-  </thead>
-  <tbody style=”color: var(--text-mid);”>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>Data Cleaning & Preparation</td>
-      <td class=”p-3”>Intermediate</td>
-    </tr>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>Dashboard Development</td>
-      <td class=”p-3”>Advanced</td>
-    </tr>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>Data Visualisation</td>
-      <td class=”p-3”>Intermediate</td>
-    </tr>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>KPI Development & Reporting</td>
-      <td class=”p-3”>Advanced</td>
-    </tr>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>Agricultural Domain Knowledge</td>
-      <td class=”p-3”>Intermediate</td>
-    </tr>
-    <tr style=”border-bottom: 1px solid var(--sky-border);”>
-      <td class=”p-3”>Data-Driven Decision Making</td>
-      <td class=”p-3”>Intermediate</td>
-    </tr>
-    <tr>
-      <td class=”p-3”>Problem Solving & Analysis</td>
-      <td class=”p-3”>Intermediate</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-    </section>
+<!-- Skills -->
+<section id="skills">
+  <div class="card green-stripe">
+    <div class="card-header">
+      <div class="card-icon icon-green">&#9881;</div>
+      <h2>Tools & Technologies</h2>
+    </div>
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Microsoft Excel</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td>SQL (PostgreSQL)</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>Python (Pandas, NumPy, Matplotlib, Seaborn)</td>
+          <td>Foundational</td>
+        </tr>
+        <tr>
+          <td>Power BI</td>
+          <td>In Progress</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <h2 style="font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--text-white); margin-bottom: 0.8rem;">Skills</h2>
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Skill</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data Cleaning & Preparation</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>Dashboard Development</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td>Data Visualisation</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>KPI Development & Reporting</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td>Agricultural Domain Knowledge</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>Data-Driven Decision Making</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>Problem Solving & Analysis</td>
+          <td>Intermediate</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
     
     <!-- Availability -->
     <div class="avail-banner">
