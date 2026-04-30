@@ -234,18 +234,46 @@
     .cert-item.in-progress strong { color: var(--gold); }
 
     /* SKILLS */
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 0.65rem; margin-top: 0.2rem;
-    }
-    .skill-pill {
-      background: rgba(77,163,245,0.07); border: 1px solid var(--sky-border);
-      border-left: 3px solid var(--blue-bright);
-      border-radius: 8px; padding: 0.6rem 0.9rem;
-      font-size: 0.82rem; font-weight: 500; color: var(--text-light);
-      transition: background 0.2s;
-    }
-    .skill-pill:hover { background: rgba(77,163,245,0.14); }
+.skills-section {
+  Background: rgba(77,163,245,0.06);
+  Border: 1px solid var(--sky-border);
+  Border-radius: 10px;
+  Padding: 1.5rem;
+}
+
+.skills-section h2 {
+  Color: var(--green);
+  Font-size: 1.3rem;
+  Font-weight: 600;
+  Margin-bottom: 1rem;
+}
+
+.skills-table {
+  Width: 100%;
+  Border-collapse: collapse;
+  Margin-top: 0.5rem;
+}
+
+.skills-table th {
+  Text-align: left;
+  Padding: 0.6rem 1rem;
+  Background: rgba(77,163,245,0.1);
+  Color: var(--text-white);
+  Font-weight: 600;
+  Font-size: 0.85rem;
+}
+
+.skills-table td {
+  Padding: 0.6rem 1rem;
+  Color: var(--text-mid);
+  Font-size: 0.85rem;
+  Border-bottom: 1px solid var(--sky-border);
+}
+
+.skills-table tr:last-child td {
+  Border-bottom: none;
+}
+
 
     /* CONTACT */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-top: 0.2rem; }
@@ -402,11 +430,12 @@
     </div>
 
     <!-- Skills -->
+    <div class="skills-section">
     <section id="skills" class="max-w-5xl mx-uto my-12 px-4">
     <div class="shadow-lg rounded-x1 p-6 space-y-8" style="background-colour: var(--navy-card);">
       <div>
       <h2 class="text-2xl font-se,ibold mb-4" style="colour: var(--green);">Tools & Technologies</h2>
-      <table class=”w-full border-collapse”>
+      <table class=”skills-section”>
   <thead>
     <tr style=”background-color: var(--green); color: var(--navy);”>
       <th class=”p-3 text-left font-semibold”>Tool</th>
@@ -436,7 +465,7 @@
       
 <div>
   <h2 class="text-2xl font-se,ibold mb-4" style="colour: var(--green);">Skills</h2>
-<table class=”w-full border-collapse mt-6”>
+<table class=”skills-section”>
   <thead>
     <tr style=”background-color: var(--green); color: var(--navy);”>
       <th class=”p-3 text-left font-semibold”>Skill</th>
@@ -477,6 +506,7 @@
 </div>
 </div>
     </section>
+    </div> class="skills-section">
     
     <!-- Availability -->
     <div class="avail-banner">
