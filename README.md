@@ -1,6 +1,6 @@
 # Nhambe DB | Portfolio Website
 
-Personal portfolio website for Nhambe DB — Agricultural Data Analyst based in Mbombela, Mpumalanga, South Africa.
+Personal portfolio website for Nhambe DB - Agricultural Data Analyst based in Mbombela, Mpumalanga, South Africa.
 
 🌐 **Live site:** https://nhambe-dokotela.github.io/Nhambe-DB_portfolio-web/
 
