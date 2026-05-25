@@ -83,7 +83,7 @@ Farm Input Cost Optimiser/
 
 ## 🔗 Links
 
-- 🌐 [Live Dashboard (Looker Studio)](https://datastudio.google.com/reporting/3cd385cb-cad0-4659-8c2d-00379de65804/page/j9GzF)
+- 🌐 [Live Dashboard (Looker Studio)]
 - 📓 [Download Notebook](https://nhambe-dokotela.github.io/Nhambe-DB_portfolio-web/projects/farm-input-cost-optimizer/farm_input_cost_optimiser.ipynb)
 - 🗂️ [View on GitHub](https://github.com/nhambe-dokotela/projects/tree/main/portfolio/Farm%20Input%20Cost%20Optimiser)
 - 💼 [Portfolio Website](https://nhambe-dokotela.github.io/Nhambe-DB_portfolio-web/index.html)
