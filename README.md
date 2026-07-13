@@ -43,7 +43,7 @@ Nhambe-DB_portfolio-web/
 | Regional Sales & Revenue Analyser | Excel & SQL | [View](projects/regional-sales-analysis/regional-sales.html) |
 | Crop Yield Predictor | Python & Excel | [View](projects/crop-yield-predictor/crop-yield.html) |
 | African Agricultural Market Price Monitor | SQL & Power BI | [View](projects/african-agricultural-market-price-monitor/price-monitor.html) |
-
+| Farm Input Cost Optimiser |Python (Pandas, Matplotlib, Seaborn) · Google Looker Studio|[View].(projects/farm-input-cost-optimizer/farm-input-optimiser.html)|
 ---
 
 ## Tech Stack
