@@ -16,9 +16,8 @@ Transform raw provincial agricultural statistics into a clean, interactive dashb
 ## Tools & Technologies
 |Layer | Tool |
 |------|------|
-|Data Extraction | Python (Tabula/Camelot) |
-|Cleaning & Analysis | Python (Pandas, Matplotlib, Seaborn)|
-|Database & Queries | SQL/ PostgreSQL |
+|Data Extraction | Excel ( Power Query)|
+|Cleaning & Analysis | Excel|
 |Visualisation | Looker Studio |
 |Report | PDF|
 
